@@ -1,0 +1,17 @@
+.sidebar__compose--btn{
+    width: 140px !important;
+    margin: 15px 0 15px 10px !important;
+    background-color: #C2E7FF !important;
+    color: #001D35 !important;
+    padding: 15px !important;
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    border-radius: 15px !important;
+}
+.sidebar__compose--btn:hover {
+    box-shadow: 1px 16px 52px -19px rgba(0,0,0,0.75);
+}
+.composeIcon {
+    font-size: large;
+    margin-right: 6px;
+}

@@ -1,0 +1,21 @@
+.email__list {
+    width: 100%;
+}
+
+.email__list--top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    background-color: #fff;
+    margin-right: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-left: 10px;
+}
+
+.email__number {
+    font-size: 12px;
+    font-weight: 600;
+    color: #717274;
+}

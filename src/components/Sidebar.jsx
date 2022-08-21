@@ -11,6 +11,7 @@ import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutl
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 import Label from '@mui/icons-material/Label';
 import LabelImportantOutlinedIcon from '@mui/icons-material/LabelImportantOutlined';
+import AddIcon from '@mui/icons-material/Add';
 
 const Sidebar = () => {
   return (
@@ -29,6 +30,14 @@ const Sidebar = () => {
       <SidebarOption Icon={InsertDriveFileOutlinedIcon} title="Drafts" number={54} />
       <SidebarOption Icon={Label} title="Categories" number={54} />
       <SidebarOption Icon={KeyboardArrowDownOutlinedIcon} title="More" number={54} />
+      <div className="label__wrapper">
+      <h3 className="labels">Labels</h3>
+      <AddIcon className="addIcon"/>
+      </div>
+      <SidebarOption Icon={Label} title="Notes" number={54} />
+      <SidebarOption Icon={Label} title="Personal" number={54} />
+      <SidebarOption Icon={KeyboardArrowDownOutlinedIcon} title="More" number={54} />
+
     </div>
   );
 };

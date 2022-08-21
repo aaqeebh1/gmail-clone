@@ -15,3 +15,25 @@
     font-size: large;
     margin-right: 6px;
 }
+
+.label__wrapper{
+    display: flex;
+    align-items: center;
+    width: 240px;
+    justify-content: space-between;
+}
+
+.addIcon {
+    padding-top: 10px;
+    color: #1f1f1fe3;
+}
+
+.labels {
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #1f1f1fe3 ;
+}

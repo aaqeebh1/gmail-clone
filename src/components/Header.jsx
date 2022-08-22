@@ -8,15 +8,17 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined";
 import "./Header.css";
+import { useNavigate } from "react-router";
 
 const Header = () => {
+  const history = useNavigate()
   return (
     <div className="header">
       <div className="header__left">
         <IconButton>
           <MenuIcon className="menuIcon" />
         </IconButton>
-        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r4.png" />
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r4.png" onClick={() => history('/')} />
       </div>
       <div className="header__middle">
         <div className="search__wrapper">

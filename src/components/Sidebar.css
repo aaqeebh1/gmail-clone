@@ -1,3 +1,7 @@
+.sidebar {
+    position: sticky;
+}
+
 .sidebar__compose--btn{
     width: 140px !important;
     margin: 15px 0 15px 10px !important;

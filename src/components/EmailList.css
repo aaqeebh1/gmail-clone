@@ -1,21 +1,76 @@
+
 .email__list {
-    width: 100%;
+  width: 100%;
 }
 
-.email__list--top-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 98%;
-    background-color: #fff;
-    margin-right: 20px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-left: 10px;
+.email__list--top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  /* margin-right: 20px; */
+  margin-left: 10px;
+  
+
 }
 
 .email__number {
-    font-size: 12px;
-    font-weight: 600;
-    color: #717274;
+  font-size: 12px;
+  font-weight: 600;
+  color: #717274;
 }
+
+.email__list--middle-bar {
+  display: flex;
+  text-align: left;
+  width: 98%;
+  margin-left: 10px;
+  background-color: #fff;
+}
+
+.email__list--section{
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: calc(100% / 3);
+  max-width: 250px;
+  height: 56px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+
+
+.email__list--section:hover {
+    background-color: #F2F2F2;
+}
+
+.email__list--icon{
+    margin-left: 8px;
+}
+
+.email__list--section-title {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blue:hover {
+    
+    border-bottom: 2px solid blue;
+}
+
+.red:hover {
+    border-bottom: 2px solid red;
+
+}
+
+.green:hover{
+    border-bottom: 2px solid green;
+
+}
+
+

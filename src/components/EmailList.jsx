@@ -7,6 +7,11 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Inbox from "@mui/icons-material/Inbox";
+import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
+import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
+import Section from "./Section";
+import EmailRow from "./EmailRow";
 
 const EmailList = () => {
   return (
@@ -37,6 +42,16 @@ const EmailList = () => {
             <ChevronRightIcon fontSize="small"/>
           </IconButton>
         </div>
+      </div>
+      <div className="email__list--middle-bar">
+        <Section Icon={Inbox} title='Primary' color={' red'}/>
+        <Section Icon={LocalOfferOutlinedIcon} title='Promotions' color={' green'}/>
+        <Section Icon={GroupOutlinedIcon} title='Social' color={' blue'}/>
+      </div>
+      <div className="email__list--rows">
+        <EmailRow title='Test' subject='test' description='testagain' time='12:59'/>
+        <EmailRow title='Test' subject='test' description='testagain' time='12:59'/>
+        <EmailRow title='Test' subject='test' description='testagain' time='12:59'/>
       </div>
     </div>
   );

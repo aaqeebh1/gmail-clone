@@ -87,30 +87,38 @@ const Mail = () => {
             </IconButton>
           </div>
           <div className="mail__body--header-right">
+            <IconButton>
             <LocalPrintshopOutlinedIcon fontSize="small" />
-            <OpenInNewOutlinedIcon fontSize="small" />
+            </IconButton>
+            <IconButton>
+            <OpenInNewOutlinedIcon fontSize="small" className="mail__body--header-icon" />
+            </IconButton>
           </div>
         </div>
-        <div className="mail__body--title">
-          <div className="mail__body--title-left">
+        <div className="mail__body--midBar">
+          <div className="mail__body--midBar-left">
             <img
               src="https://lh3.googleusercontent.com/a/default-user=s40-p"
               className="avatar__img"
             />
-            <h3>Title</h3>
-            <p>Sender Email</p>
-            <p>timestamp</p>
+            <h3 className="mail__body--title">Title</h3>
+            <p className="mail__body--description">Sender Email</p>
+            
           </div>
-          <div className='mail__body--title-right'>
+          <div className='mail__body--midBar-right'>
+          <p className="mail__body--timestamp">timestamp</p>
             <IconButton>
-              <StarBorderOutlinedIcon />
+              <StarBorderOutlinedIcon fontSize="small"/>
             </IconButton>
             <IconButton>
-              <ReplyOutlinedIcon />
+              <ReplyOutlinedIcon fontSize="small" />
             </IconButton>
             <IconButton>
-              <MoreVertOutlinedIcon />
+              <MoreVertOutlinedIcon  fontSize="small"/>
             </IconButton>
+          </div>
+          <div className="mail__message---sction">
+
           </div>
         </div>
       </div>

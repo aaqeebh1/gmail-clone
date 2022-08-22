@@ -33,6 +33,8 @@
   }
 
   .mail__tools--group {
+    display: flex;
+    flex-wrap: nowrap;
     border-right: 1px solid rgba(211, 211, 211, 0.267);
     margin-right: 12px;
     padding-right: 8px;
@@ -53,23 +55,24 @@
 
   .avatar__img {
     border-radius: 50%;
+    padding: 0 16px;
   }
   
   .mail__body--header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
+    padding: 20px 0 8px 72px;
   }
 
   .mail__body{
     display: flex;
     flex-direction: column;
-    margin: 30px;
-    padding: 20px;
     height: 100vh;
   }
 
   .mail__body--header-left{
     display: flex;
+    flex-wrap: wrap;
   }
 
   .mail__body--header-left > h2 {
@@ -77,13 +80,42 @@
     margin-right: 10px;
   }
 
-  .mail__body--title{
+  .mail__body--header-icon {
+    margin-right: 30px;
+  }
+
+  .mail__body--midBar{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
   }
 
-  .mail__body--title-left{
+  .mail__body--midBar-left{
     display: flex;
     align-items: center;
+    flex: 0.95;
   }
+
+  .mail__body--title {
+    padding-left:  8px;
+    margin-right: 2px;
+    font-size: 14px;
+    
+  }
+
+  .mail__body--description {
+    font-size: 12px;
+  }
+
+  .mail__body--midBar-right {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  .mail__body--timestamp {
+    font-size: 12px;
+  }
+  

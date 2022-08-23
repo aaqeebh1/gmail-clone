@@ -19,9 +19,12 @@ import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import { IconButton } from "@mui/material";
 import { useNavigate } from "react-router";
 import "./Mail.css";
+import { useSelector } from "react-redux/es/exports";
+import { selectOpenEmail } from "../features/mailSlice";
 
 const Mail = () => {
   const history = useNavigate();
+  const selectedMail = useSelector(selectOpenEmail)
   return (
     <div className="mail">
       <div className="mail__tools">
@@ -78,7 +81,7 @@ const Mail = () => {
       <div className="mail__body">
         <div className="mail__body--header">
           <div className="mail__body--header-left">
-            <h2>Subject</h2>
+            <h2>{selectedMail.subject}</h2>
             <IconButton>
               <LabelImportantOutlinedIcon
                 className="mail__important"
@@ -101,12 +104,12 @@ const Mail = () => {
               src="https://lh3.googleusercontent.com/a/default-user=s40-p"
               className="avatar__img"
             />
-            <h3 className="mail__body--title">Title</h3>
-            <p className="mail__body--description">Sender Email</p>
+            <h3 className="mail__body--title">{selectedMail.subject}</h3>
+            <p className="mail__body--description">{selectedMail.title}</p>
             
           </div>
           <div className='mail__body--midBar-right'>
-          <p className="mail__body--timestamp">timestamp</p>
+          <p className="mail__body--timestamp">{selectedMail.time}</p>
             <IconButton>
               <StarBorderOutlinedIcon fontSize="small"/>
             </IconButton>
@@ -117,10 +120,10 @@ const Mail = () => {
               <MoreVertOutlinedIcon  fontSize="small"/>
             </IconButton>
           </div>
-          <div className="mail__message---sction">
-
-          </div>
         </div>
+          <div className="mail__message---section">
+            <p>{selectedMail.description}</p>
+          </div>
       </div>
     </div>
   );

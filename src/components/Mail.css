@@ -4,7 +4,7 @@
     background-color: #fff;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    overflow: hidden;
+    overflow: scroll;
 }
 .mail__tools {
     display: flex;
@@ -14,6 +14,9 @@
     background-color: #fff; 
     margin-left: 5px;
     margin-top: 4px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 
   .mail__tools--left {
@@ -117,5 +120,15 @@
 
   .mail__body--timestamp {
     font-size: 12px;
+  }
+  .mail__message---section{
+    height: 300px;
+    z-index: 1000;
+  }
+
+  .mail__message---section > p {
+    font-weight: 500;
+    font-size: 18px;
+    padding: 25px;
   }
   

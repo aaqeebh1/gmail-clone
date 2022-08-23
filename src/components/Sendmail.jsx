@@ -5,6 +5,8 @@ import { Alert, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { closeSendMessage } from "../features/mailSlice";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
+import { db } from "./firebase.jsx";
+import firebase from "firebase/compat/app";
 
 const Sendmail = () => {
   const {
@@ -13,18 +15,28 @@ const Sendmail = () => {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (formData) => {
-    console.log(formData);
-  };
-  const dispatch = useDispatch()
 
-  
+  const onSubmit = (formData) => {
+    db.collection("email").add({
+      to: formData.to,
+      subject: formData.subject,
+      message: formData.message,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
+    dispatch(closeSendMessage());
+  };
+
+  const dispatch = useDispatch();
 
   return (
     <div className="sendmail">
       <div className="sendmail__header">
         <h3>New Message</h3>
-        <CloseIcon className="sendmail__close-icon" onClick={() => dispatch(closeSendMessage())} />
+        <CloseIcon
+          className="sendmail__close-icon"
+          onClick={() => dispatch(closeSendMessage())}
+        />
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input

@@ -1,6 +1,7 @@
 
 .email__list {
   width: 100%;
+  overflow: scroll;
 }
 
 .email__list--top-bar {
@@ -13,8 +14,9 @@
   border-top-right-radius: 15px;
   /* margin-right: 20px; */
   margin-left: 10px;
-  
-
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .email__number {
@@ -71,6 +73,10 @@
 .green:hover{
     border-bottom: 2px solid green;
 
+}
+
+.email__list--rows {
+  padding-bottom: 30%;
 }
 
 

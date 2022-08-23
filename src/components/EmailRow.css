@@ -6,6 +6,7 @@
     margin-left: 10px;
     cursor: pointer;
     border-bottom: 1px solid lightgrey;
+    text-align: left;
 }
 
 .email__row:nth-child(1) {
@@ -29,13 +30,16 @@
 
 .email__row--title {
     font-size: 13px;
-    flex: 0.3;
+    flex: 0.13;
 }
 .email__row--message {
     display: flex;
-    flex: 0.8;
+    flex: 0.87;
+    white-space: nowrap;
+    overflow: hidden;
     align-items: center;
     font-size: 13px;
+    text-align: left;
 }
 .email__row--message > h4 {
     width: 400px;
